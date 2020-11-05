@@ -36,15 +36,7 @@ function removeOrderItem(orderInfo, position){
             
             }
             orderInfo.total = total;
-            let arr = new Array();
-            arr[0] = orderInfo.total;
-            let index = 0;
-            while(index < orderInfo.items.length)
-            {    
-                arr[index + 1] = [orderInfo.items[index].price, orderInfo.items[index].quantity];
-                index += 1;
-            }
-            return arr;
+            return orderInfo;
         }
     }
     else
